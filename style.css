@@ -1,0 +1,67 @@
+body {
+    font-family: sans-serif;
+}
+#cartas-container {
+    display: block
+}
+.cartas-container-row {
+    display: flex;
+    flex-direction: row;
+}
+.carta {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: none;
+    margin: 0px;
+    transition-duration: .2s;
+    z-index: 1;
+    /*perspective: 1000px;*/
+}
+.carta:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+.carta-conteudo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.carta.vermelho .carta-frente {
+    background-color: rgb(255, 91, 91);
+}
+.carta.amarelo .carta-frente {
+    background-color: rgb(255, 239, 92);
+}
+.carta.azul .carta-frente {
+    background-color: rgb(123, 235, 255);
+}
+.carta.roxo .carta-frente {
+    background-color: rgb(218, 123, 255);
+}
+.carta.laranja .carta-frente {
+    background-color: rgb(255, 202, 123);
+}
+
+.carta.aberta .carta-conteudo {
+    transform: rotateY(180deg);
+}
+.carta-frente, .carta-verso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+.carta-frente {
+    color: black;
+}
+.carta-verso {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+} 
