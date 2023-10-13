@@ -1,3 +1,4 @@
+//Função para abrir e fechar cards
 function abrir(){
     if ($(this).hasClass("aberta")){
         $(this).removeClass("aberta");
@@ -5,31 +6,60 @@ function abrir(){
         $(this).addClass("aberta");
     }
 }
+
+//Função para sortear as cores dos cards
+var corLista = ["vermelho","amarelo","azul","roxo","laranja","verde"];
 function sortearCor(){
-    c = ["vermelho","amarelo","azul","roxo","laranja"];
-    cc = c[Math.floor(Math.random() * c.length)];
-    $(this).addClass(cc);
+    corEscolhida = Math.floor(Math.random() * corLista.length);
+    $(this).addClass(corLista[corEscolhida]);
+    corLista.splice(corEscolhida,1);
+    if (corLista.length == 0){
+        corLista = ["vermelho","amarelo","azul","roxo","laranja","verde"];
+    }
 }
 
 $(document).ready(function(){
-    //Gerando 15 cartas na tela (5*3=15)
-    for (j=0;j<5;j++){
-        var txt = '<div class="cartas-container-row">';
-        for (i=0;i<3;i++){
-            $.getJSON("./perguntas.json", function(data){
-                $.each(result, function(f, field){
-                    console.log(field + " ");
+    //Obter perguntas do JSON
+    var cols = 0;
+    $.getJSON("./perguntas.json", function (data) {
+        $.each(data, function(key, val) {
+            //Encontrar perguntas
+            var txt = "";
+            if (key == "lista"){
+                $.each(val, function(pk, pv) {
+                    //Iniciar linha se for a primeira carta da linha
+                    if (cols == 0){
+                        txt += '<div class="cartas-container-row">';
+                    }
+
+                    //Criar carta
+                    txt += '<div class="carta"> \
+                                <div class="carta-conteudo"> \
+                                    <div class="carta-frente"> \
+                                        <h1>' + pv.pergunta + '</h1> \
+                                        <p>' + pv.descricao + '</p> \
+                                    </div> \
+                                <div class="carta-verso"> \
+                                    <h1>' + pv.resposta + '</h1> \
+                                    <p>' + pv.explicacao + '</p> \
+                                </div> \
+                            </div> \
+                        </div>';
+
+                    //Fechar linha se for a última carta da linha
+                    if (cols == 2){
+                        txt += "</div>";
+                        cols = 0;
+                    }else{
+                        cols++;
+                    }
                 });
-            });
-            txt += '<div class="carta"><div class="carta-conteudo">';
-            txt += '<div class="carta-frente"><h1>Pergunta 1</h1><p>Bla bla bla</p></div>'
-            txt += '<div class="carta-verso"><h1>Resposta</h1><p>plim plim plum</p></div>'
-            txt += '</div></div>';
-        }
-        txt += "</div>";
-        $("#cartas-container").append(txt);
-    }
-    //Para cada carta, sortear uma cor e fazer com que ela abra ao clicar
-    $(".carta").each(sortearCor);
-    $(".carta").click(abrir);
+            }
+            $("#cartas-container").append(txt);
+        });
+
+        //Para cada carta, sortear uma cor e fazer com que ela abra ao clicar
+        $(".carta").each(sortearCor);
+        $(".carta").click(abrir);
+    });
 });

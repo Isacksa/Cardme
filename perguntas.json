@@ -1,18 +1,41 @@
-"lista": [
-    {"pergunta": "Pergunta 1","resposta": "plim plim plum"},
-    {"pergunta": "Pergunta 2","resposta": "plim plim plum"},
-    {"pergunta": "Pergunta 3","resposta": "plim plim plum"},
-    {"pergunta": "Pergunta 4","resposta": "plim plim plum"},
-    {"pergunta": "Pergunta 5","resposta": "plim plim plum"},
-    {"pergunta": "Pergunta 6","resposta": "plim plim plum"},
-    {"pergunta": "Pergunta 7","resposta": "plim plim plum"},
-    {"pergunta": "Pergunta 8","resposta": "plim plim plum"},
-    {"pergunta": "Pergunta 9","resposta": "plim plim plum"},
-    {"pergunta": "Pergunta 10","resposta": "plim plim plum"},
-    {"pergunta": "Pergunta 11","resposta": "plim plim plum"},
-    {"pergunta": "Pergunta 12","resposta": "plim plim plum"},
-    {"pergunta": "Pergunta 13","resposta": "plim plim plum"},
-    {"pergunta": "Pergunta 14","resposta": "plim plim plum"},
-    {"pergunta": "Pergunta 15","resposta": "plim plim plum"},
-    {"pergunta": "Pergunta 16","resposta": "plim plim plum"}
-]
+{
+    "title": "Perguntas",
+    "lista": [
+        {
+            "pergunta": "O que pensas da vida?",
+            "descricao": "Você acha que a vida é legal?",
+            "resposta": "A vida é legal",
+            "explicacao": "Porque sim ue"
+        },
+        {
+            "pergunta": "E a situação do país?",
+            "descricao": "Você acha que o Brasil tá bacana?",
+            "resposta": "Mais ou menos",
+            "explicacao": "As coisa vão indo ne"
+        },
+        {
+            "pergunta": "O que pensas da vida?",
+            "descricao": "Você acha que a vida é legal?",
+            "resposta": "A vida é legal",
+            "explicacao": "Porque sim ue"
+        },
+        {
+            "pergunta": "E a situação do país?",
+            "descricao": "Você acha que o Brasil tá bacana?",
+            "resposta": "Mais ou menos",
+            "explicacao": "As coisa vão indo ne"
+        },
+        {
+            "pergunta": "O que pensas da vida?",
+            "descricao": "Você acha que a vida é legal?",
+            "resposta": "A vida é legal",
+            "explicacao": "Porque sim ue"
+        },
+        {
+            "pergunta": "E a situação do país?",
+            "descricao": "Você acha que o Brasil tá bacana?",
+            "resposta": "Mais ou menos",
+            "explicacao": "As coisa vão indo ne"
+        }
+    ]
+}
