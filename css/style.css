@@ -1,3 +1,5 @@
+/* VARIÁVEIS DE CORES QUE SERÃO
+   REUTILIZADOS NO CÓDIGO */
 :root{
     --vermelho: rgb(255, 91, 91);
     --amarelo: rgb(255, 239, 92);
@@ -6,7 +8,6 @@
     --laranja: rgb(255, 202, 123);
     --verde: rgb(176, 255, 123);
 }
-
 body {
     font-family: sans-serif;
     margin: 0px;
@@ -44,6 +45,9 @@ body {
     transform-style: preserve-3d;
 }
 
+/* PINTA A PARTE DA FRENTE DO CARD
+DE ACORDO COM A CLASSE SORTEADA EM
+sortearCor() no script.js */
 .carta.vermelho .carta-frente {
     background-color: var(--vermelho);
 }
