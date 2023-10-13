@@ -21,7 +21,7 @@ function sortearCor(){
 $(document).ready(function(){
     //Obter perguntas do JSON
     var cols = 0;
-    $.getJSON("./perguntas.json", function (data) {
+    $.getJSON("./json/perguntas.json", function (data) {
         $.each(data, function(key, val) {
             //Encontrar perguntas
             var txt = "";
