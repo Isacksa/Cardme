@@ -1,0 +1,41 @@
+{
+    "title": "Perguntas",
+    "lista": [
+        {
+            "pergunta": "O que pensas da vida?",
+            "descricao": "Você acha que a vida é legal?",
+            "resposta": "A vida é legal",
+            "explicacao": "Porque sim ue"
+        },
+        {
+            "pergunta": "E a situação do país?",
+            "descricao": "Você acha que o Brasil tá bacana?",
+            "resposta": "Mais ou menos",
+            "explicacao": "As coisa vão indo ne"
+        },
+        {
+            "pergunta": "O que pensas da vida?",
+            "descricao": "Você acha que a vida é legal?",
+            "resposta": "A vida é legal",
+            "explicacao": "Porque sim ue"
+        },
+        {
+            "pergunta": "E a situação do país?",
+            "descricao": "Você acha que o Brasil tá bacana?",
+            "resposta": "Mais ou menos",
+            "explicacao": "As coisa vão indo ne"
+        },
+        {
+            "pergunta": "O que pensas da vida?",
+            "descricao": "Você acha que a vida é legal?",
+            "resposta": "A vida é legal",
+            "explicacao": "Porque sim ue"
+        },
+        {
+            "pergunta": "E a situação do país?",
+            "descricao": "Você acha que o Brasil tá bacana?",
+            "resposta": "Mais ou menos",
+            "explicacao": "As coisa vão indo ne"
+        }
+    ]
+}

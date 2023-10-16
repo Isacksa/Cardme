@@ -1,0 +1,87 @@
+/* VARIÁVEIS DE CORES QUE SERÃO
+   REUTILIZADOS NO CÓDIGO */
+:root{
+    --vermelho: rgb(255, 91, 91);
+    --amarelo: rgb(255, 239, 92);
+    --azul: rgb(123, 235, 255);
+    --roxo: rgb(218, 123, 255);
+    --laranja: rgb(255, 202, 123);
+    --verde: rgb(176, 255, 123);
+}
+body {
+    font-family: sans-serif;
+    margin: 0px;
+}
+#cartas-container {
+    width: 100%;
+    display: block;
+}
+.cartas-container-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.carta {
+    background-color: transparent;
+    height: 200px;
+    border: none;
+    margin: 0px;
+    transition-duration: .2s;
+    z-index: 1;
+    flex: 1;
+    /*perspective: 1000px;*/
+}
+.carta:hover {
+    transform: scale(1.1);
+    z-index: 10;
+    cursor: pointer;
+}
+.carta-conteudo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* PINTA A PARTE DA FRENTE DO CARD
+DE ACORDO COM A CLASSE SORTEADA EM
+sortearCor() no script.js */
+.carta.vermelho .carta-frente {
+    background-color: var(--vermelho);
+}
+.carta.amarelo .carta-frente {
+    background-color: var(--amarelo);
+}
+.carta.azul .carta-frente {
+    background-color: var(--azul);
+}
+.carta.roxo .carta-frente {
+    background-color: var(--roxo);
+}
+.carta.laranja .carta-frente {
+    background-color: var(--laranja);
+}
+.carta.verde .carta-frente {
+    background-color: var(--verde);
+}
+
+.carta.aberta .carta-conteudo {
+    transform: rotateY(180deg);
+}
+.carta-frente, .carta-verso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+.carta-frente {
+    color: black;
+}
+.carta-verso {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+} 
