@@ -33,7 +33,7 @@ $(document).ready(function(){
     $.getJSON("./json/perguntas.json", function (data) {
 
         //Encontrar pela lista de perguntas dentro do arquivo JSO
-        $.each(data, function(key, val) {N
+        $.each(data, function(key, val) {
             var txt = "";
             if (key == "lista"){
                 
@@ -74,7 +74,12 @@ $(document).ready(function(){
         });
 
         //Para cada carta, sortear uma cor e fazer com que ela abra ao clicar
+        var anidelay = 0;
         $(".carta").each(sortearCor);
+        $(".carta").each(function(){
+            $(this).css("animation-delay","." + anidelay + "s");
+            anidelay++;
+        });
         $(".carta").click(abrir);
     });
 });
